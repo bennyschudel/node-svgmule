@@ -31,11 +31,10 @@ into
 ```
 
 ready to be included
-```
-
+```php
 <body>
-    <% include "_build/global.svg" %>
-    <% include "_build/pages.${page_name}.svg" %>
+    <? include "_build/global.svg" ?>
+    <? include "_build/pages.${page_name}.svg" ?>
     ...
 ```
 
@@ -58,4 +57,4 @@ more in details soon.
 Feedback welcome! Contact me [@bennyschudel](http://twitter.com/bennyschudel).
 
 #### LEGAL
-Copyright (c) 2014 Benny Schudel - [MIT-License](https://raw.github.com/bennyschudel/node-svgmule/master/LICENSE)
+Copyright (c) 2014 Benjamin Schudel - [MIT-License](https://raw.github.com/bennyschudel/node-svgmule/master/LICENSE)
