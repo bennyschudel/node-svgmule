@@ -1,7 +1,7 @@
 {
   "name": "svgmule",
   "version": "0.4.4",
-  "description": "Optimizes and packs multiple SVG-files into a single file on a per folder basis.",
+  "description": "Combines and minimizes your original SVG's on a per folder basis into one single file each.",
   "keywords": [
     "svg",
     "package",
@@ -19,8 +19,7 @@
   },
   "directories": {
     "bin": "./bin",
-    "lib": "./lib",
-    "example": "./examples"
+    "lib": "./lib"
   },
   "dependencies": {
     "svgo": "~0.4.4",
