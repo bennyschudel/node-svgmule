@@ -1,0 +1,23 @@
+svgmule:
+  input_dir: './'
+  output_dir: '_build/'
+  exclude_pattern: '/^[_]/' #exclude folders and files starting with _
+  template: |
+    <!--
+      | <%= meta.file_name %> — <%= moment().format('LLL') %>
+      |
+      | CAUTION: This file is auto-generated — do not edit.
+    -->
+    <svg id="svg-assets--<%= meta.base_name.split('.').join('-') %>" style="display:none;">
+      <defs>
+        <%= body %>
+      </defs>
+    </svg>
+
+  plugins:
+    mapFileNameToId: true
+
+  svgo:
+    plugins:
+      - removeTitle: true
+

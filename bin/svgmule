@@ -1,0 +1,93 @@
+#!/usr/bin/env node
+
+var path = require('path');
+
+var DEFAULTS_FILE = path.resolve(__dirname+'/../lib/defaults.yml');
+var CONFIG_FILE   = 'svgmule.yml';
+
+var pkg     = require('../package.json');
+var svgmule = require('../lib/svgmule');
+
+var coa = require('coa');
+var _   = require('lodash');
+
+var log = console.log;
+
+
+require('coa').Cmd()
+	.helpful()
+	.name(pkg.name)
+	.title(pkg.description)
+	.opt()
+		.name('version').title('Version')
+		.short('v').long('version')
+		.only()
+		.flag()
+		.act(function() {
+			return pkg.version;
+		})
+		.end()
+	.opt()
+		.name('config').title('File or JSON.')
+		.short('c').long('config')
+		.end()
+	.act(function(opts, args) {
+		var params = {
+			config: loadConfig( opts.config ),
+		};
+
+		svgmule(params);
+	})
+	.run();
+
+
+function loadConfig(arg0) {
+	var config = {};
+	var re_is_dir_param = /_dir$/;
+
+	var custom_config;
+
+	function addEndingOsSep(str) {
+		var sep = path.sep;
+
+		if (str.substr(-1) === sep) {
+			return str;
+		}
+
+		return str+sep;
+	}
+
+	if (!_.isPlainObject(arg0)) {
+		try {
+			custom_config = JSON.parse(arg0);
+		} catch(e) {
+			var files = [ arg0, CONFIG_FILE, '.'+CONFIG_FILE ];
+
+			_.each(files, function(file) {
+				try {
+					custom_config = require(file);
+
+					return false;
+				} catch(e) {}
+			});
+		}
+	}
+
+	if (custom_config) {
+		if (!('svgmule' in custom_config)) {
+			custom_config = {
+				svgmule : custom_config
+			};
+		}
+			// add ending os separator to config variables matching '*_dir'
+		_.each(custom_config.svgmule, function(value, key) {
+			if (re_is_dir_param.test(key)) {
+				custom_config.svgmule[key] = addEndingOsSep(value);
+			}
+		});
+	}
+
+	_.merge(config, require(DEFAULTS_FILE), custom_config);
+
+	return config;
+}

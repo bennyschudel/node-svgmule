@@ -1,0 +1,10 @@
+svgmule:
+  input_dir: './example/assets/'
+  output_dir: './_build/'
+
+  plugins:
+    mapFileNameToId: true
+
+  svgo:
+    plugins:
+      - removeTitle: true

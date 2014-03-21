@@ -1,0 +1,48 @@
+{
+  "name": "svgmule",
+  "version": "0.4.4",
+  "description": "Optimizes and packs multiple SVG-files into a single file on a per folder basis.",
+  "keywords": [
+    "svg",
+    "package",
+    "optimize",
+    "minify"
+  ],
+  "homepage": "http://bennyschudel.github.com/node-svgmule/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bennyschudel/node-svgmule/node-svgmule.git"
+  },
+  "main": "./lib/svgmule.js",
+  "bin": {
+    "svgmule": "./bin/svgmule"
+  },
+  "directories": {
+    "bin": "./bin",
+    "lib": "./lib",
+    "example": "./examples"
+  },
+  "dependencies": {
+    "svgo": "~0.4.4",
+    "glob": "~3.2.8",
+    "lodash": "~2.4.1",
+    "q": "~1.0.0",
+    "underscore.string": "~2.3.3",
+    "js-yaml": "~3.0.2",
+    "moment": "~2.5.1",
+    "mkdirp": "~0.3.5",
+    "filesize": "~2.0.3",
+    "colors": "~0.6.2",
+    "coa": "~0.4.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/bennyschudel/node-svgmule/master/LICENSE"
+    }
+  ]
+}
