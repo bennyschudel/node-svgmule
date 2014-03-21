@@ -1,4 +1,5 @@
 svgmule:
+  verbose: true
   input_dir: './'
   output_dir: '_build/'
   exclude_pattern: '/^[_]/' #exclude folders and files starting with _

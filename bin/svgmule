@@ -27,13 +27,22 @@ require('coa').Cmd()
 		})
 		.end()
 	.opt()
-		.name('config').title('File or JSON.')
+		.name('config').title('File or JSON')
 		.short('c').long('config')
+		.end()
+	.opt()
+		.name('silent').title('Silence output')
+		.long('silent')
+		.flag()
 		.end()
 	.act(function(opts, args) {
 		var params = {
 			config: loadConfig( opts.config ),
 		};
+
+		if (opts.silent) {
+			params.config.svgmule.verbose = false;
+		}
 
 		svgmule(params);
 	})
