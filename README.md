@@ -12,7 +12,7 @@ turns
     │   ├── logo.svg
     │   ├── icon--help.svg
     │   ├── icon--menu.svg
-    │   ├── icon--heart.svg
+    │   └── icon--heart.svg
     └── pages
         └── home
             ├── welcome.svg
