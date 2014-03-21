@@ -39,6 +39,20 @@ ready to be included
     ...
 ```
 
+and to be used in your html
+```html
+<style>
+	.logo {
+		width  : 96px;
+		height : 64px;
+	}
+</style>
+
+<svg class="logo">
+	<use xlink:href="#svg-logo"/>
+</svg>
+```
+
 more in details soon.
 
 Feedback welcome! Contact me [@bennyschudel](http://twitter.com/bennyschudel).
