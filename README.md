@@ -55,7 +55,7 @@ and to be used in your html
 more in details soon.
 
 
-## CONFIGURATION
+### CONFIGURATION
 
 Please check [defaults.yml](https://github.com/bennyschudel/node-svgmule/blob/master/lib/defaults.yml) for a list of available options.
 
@@ -68,12 +68,12 @@ or by providing a JSON string as an argument.
 > svgmule --config '{"input_dir":"assets/"}'
 
 
-## MINIFICATION / OPTIMIZATION
+### MINIFICATION / OPTIMIZATION
 
 SVG minification is done via [svgo (svgmin)](https://github.com/svg/svgo) from [@deepsweet](https://github.com/deepsweet).
 
 
-## ABOUT
+### ABOUT
 
 Feedback welcome! Contact me [@bennyschudel](https://github.com/bennyschudel) or follow me on [twitter](http://twitter.com/bennyschudel).
 
