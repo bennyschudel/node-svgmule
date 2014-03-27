@@ -77,5 +77,5 @@ SVG minification is done via [svgo (svgmin)](https://github.com/svg/svgo) from [
 
 Feedback welcome! Contact me [@bennyschudel](https://github.com/bennyschudel) or follow me on [twitter](http://twitter.com/bennyschudel).
 
-#### Legal
-Copyright (c) 2014 Benjamin Schudel - [MIT-License](https://raw.github.com/bennyschudel/node-svgmule/master/LICENSE)
+
+Copyright (c) 2014 Benny Schudel - [MIT-License](https://raw.github.com/bennyschudel/node-svgmule/master/LICENSE)

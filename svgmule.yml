@@ -6,5 +6,6 @@ svgmule:
     mapFileNameToId: true
 
   svgo:
+    full: false
     plugins:
       - removeTitle: true

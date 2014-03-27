@@ -1,6 +1,6 @@
 {
   "name": "svgmule",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "description": "Combines and minimizes your original SVG's on a per folder basis into one single file each.",
   "keywords": [
     "svg",
@@ -9,11 +9,19 @@
     "minify"
   ],
   "homepage": "http://bennyschudel.github.com/node-svgmule/",
+  "author": {
+    "name": "Benny Schudel",
+    "email": "bennyschudel@gmail.com",
+    "url": "http://benjaminschudel.com"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/bennyschudel/node-svgmule/node-svgmule.git"
   },
   "main": "./lib/svgmule.js",
+  "bugs": {
+    "url": "https://github.com/bennyschudel/node-svgmule/issues"
+  },
   "bin": {
     "svgmule": "./bin/svgmule"
   },
@@ -34,7 +42,6 @@
     "colors": "~0.6.2",
     "coa": "~0.4.0"
   },
-  "devDependencies": {},
   "engines": {
     "node": ">=0.8.0"
   },
