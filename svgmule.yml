@@ -9,3 +9,6 @@ svgmule:
     full: false
     plugins:
       - removeTitle: true
+      - removeDimensions: true
+      - removeAttrs:
+          attrs: '(fill|stroke)'
