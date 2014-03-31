@@ -1,6 +1,6 @@
 {
   "name": "svgmule",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Combines and minimizes your original SVG's on a per folder basis into one single file each.",
   "keywords": [
     "svg",
