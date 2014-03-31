@@ -7,16 +7,18 @@ SVG asset management made simple. Combines and minimizes your original SVG's on 
 turns
 ```
 .
-└── assets
-    ├── global
-    │   ├── logo.svg
-    │   ├── icon--help.svg
-    │   ├── icon--menu.svg
-    │   └── icon--heart.svg
-    └── pages
-        └── home
-            ├── welcome.svg
-            └── mule.svg
+├── assets
+│   ├── global
+│   │   ├── logo.svg
+│   │   ├── icon--help.svg
+│   │   ├── icon--menu.svg
+│   │   └── icon--heart.svg
+│   └── pages
+│       └── home
+│           ├── welcome.svg
+│           └── mule.svg
+├── svgmule.yml
+│ ...
 ```
 
 into
@@ -25,9 +27,9 @@ into
 ├── _build
 |   ├── global.svg
 |   └── pages.home.svg
-└── assets
-    | ...
-
+├── assets
+|   ├── ...
+| ...
 ```
 
 ready to be included
@@ -59,13 +61,32 @@ more in details soon.
 
 Please check [defaults.yml](https://github.com/bennyschudel/node-svgmule/blob/master/lib/defaults.yml) for a list of available options.
 
-The configuration itself can be either done either via a config file in the root folder
+The global configuration itself can be either done either via a config file in the root folder
 
-> svgmule.yml, .svgmule.yml
+> svgmule.yml
 
 or by providing a JSON string as an argument.
 
 > svgmule --config '{"input_dir":"assets/"}'
+
+In a case where an SVG needs a specific treatment you can specify a *FILENAME.svg.yml* in the same folder where your SVG resides. If you need a special treatment for a whole folder you can provide a *FOLDERNAME.yml* configuration file on the same level as where your folder is.
+
+```
+.
+├── assets
+│   ├── global
+│   │   ├── logo.svg
+│   │   ├── logo.svg.yml
+│   │   ├── ...
+│   ├── pages
+│   │   └── home
+│   │       ├── welcome.svg
+│   │       ├── mule.svg
+│   │       ├── ...
+│   └── global.yml
+├── svgmule.yml
+│ ...
+```
 
 
 ## Minification / Optimization
